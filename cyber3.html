@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CYBERSECURITY FOR THE FUTURE LIFE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        /* --- NEW STYLE FOR YOUR LOGO --- */
+        
+        .logo-img {
+            width: 150px;
+            /* You can adjust this size */
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+        }
+        /* ---------------------------------- */
+        
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.2), transparent);
+            animation: scan 3s infinite;
+        }
+        
+        @keyframes scan {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px #00ffcc;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%,
+            100% {
+                text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+            }
+            50% {
+                text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc;
+            }
+        }
+        
+        nav {
+            margin-top: 20px;
+        }
+        
+        nav a {
+            margin: 0 15px;
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00ffcc;
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-header {
+            display: inline-block;
+            padding: 10px 30px;
+            background: rgba(0, 255, 204, 0.1);
+            border-radius: 50px;
+            margin-bottom: 20px;
+            border: 2px solid #00ffcc;
+        }
+        
+        img,
+        iframe {
+            max-width: 90%;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        img:hover,
+        iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(0, 255, 204, 0.5);
+        }
+        
+        ul {
+            text-align: left;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        
+        ul li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        ul li::before {
+            content: '►';
+            position: absolute;
+            left: 0;
+            color: #00ffcc;
+            font-size: 1.2em;
+        }
+        
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 800px;
+            background-color: #1e1e1e;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        th,
+        td {
+            border: 1px solid #00ffcc;
+            padding: 15px;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+        
+        th {
+            background-color: #00ffcc;
+            color: black;
+            font-weight: bold;
+        }
+        
+        tr:hover td {
+            background-color: rgba(0, 255, 204, 0.1);
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #00ffcc;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 255, 204, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #00ffcc, #00cc99);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 255, 204, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.6);
+            background: linear-gradient(135deg, #00cc99, #00ffcc);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="Futuristic Technology Firm Logo.png" alt="SON Robotics Cybersecurity Logo" class="logo-img">
+
+        <h1>CYBERSECURITY AND DIGITAL PROTECTION</h1>
+        <p>Protecting data and systems in an interconnected world</p>
+        <nav>
+            <a href="vison.html">Home</a>
+            <a href="robotics.html">Robotics</a>
+            <a href="tech.html">Technology</a>
+            <a href="worksop.html">Workshop</a>
+        </nav>
+    </header>
+
+    <section id="basics">
+        <div class="section-header">
+            <h2>🔒 What is Cybersecurity?</h2>
+        </div>
+        <div class="card">
+            <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These cyber attacks are usually aimed at accessing, changing, or destroying sensitive information; extorting money from users; or interrupting
+                normal business processes.</p>
+        </div>
+
+        <div class="card">
+            <h3>Core Pillars of Security</h3>
+            <ul>
+                <li><strong>Confidentiality:</strong> Preventing unauthorized access to information.</li>
+                <li><strong>Integrity:</strong> Ensuring information is accurate and has not been tampered with.</li>
+                <li><strong>Availability:</strong> Guaranteeing authorized users can access information when needed.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    ---
+
+    <section id="threats">
+        <div class="section-header">
+            <h2>⚠️ Common Cyber Threats</h2>
+        </div>
+
+        <table>
+            <tr>
+                <th>Threat</th>
+                <th>Description</th>
+                <th>Mitigation</th>
+            </tr>
+            <tr>
+                <td>**Malware**</td>
+                <td>Malicious software (viruses, ransomware, spyware) designed to damage or disable systems.</td>
+                <td>Antivirus software, system patching, network monitoring.</td>
+            </tr>
+            <tr>
+                <td>**Phishing**</td>
+                <td>Deceptive emails or messages trying to trick users into revealing sensitive data.</td>
+                <td>User training, email filtering, multi-factor authentication.</td>
+            </tr>
+            <tr>
+                <td>**DDoS**</td>
+                <td>Distributed Denial of Service; overwhelming a server with traffic to shut it down.</td>
+                <td>Traffic filtering, load balancing, cloud-based protection services.</td>
+            </tr>
+            <tr>
+                <td>**Zero-Day Exploit**</td>
+                <td>Exploiting a software vulnerability before the vendor can release a patch.</td>
+                <td>Intrusion prevention systems, behavioral analysis tools.</td>
+            </tr>
+        </table>
+
+        <a href="#" class="cta-button">Learn Threat Detection</a>
+    </section>
+
+    ---
+
+    <section id="careers">
+        <div class="section-header">
+            <h2>🛡️ Careers in Cyber Protection</h2>
+        </div>
+
+        <div class="card">
+            <p>The cybersecurity field is one of the fastest-growing job markets globally, with high demand for skilled professionals to protect against ever-evolving threats.</p>
+        </div>
+
+        <div class="card">
+            <h3>Key Roles:</h3>
+            <ul>
+                <li><strong>Security Analyst:</strong> Monitors systems, detects threats, and implements defense measures.</li>
+                <li><strong>Ethical Hacker (Pen Tester):</strong> Legally tests systems to find vulnerabilities before attackers do.</li>
+                <li><strong>Forensics Expert:</strong> Investigates cyber crimes to gather evidence after an attack.</li>
+                <li><strong>Chief Information Security Officer (CISO):</strong> Oversees the entire organization's security strategy.</li>
+            </ul>
+        </div>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj15dJb8x_g" title="Why is Cybersecurity Important?" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    ---
+
+    <footer>
+        <p>&copy; 2024 SON ROBOTICS. All rights reserved.</p>
+        <p>Empowering the next generation of digital defenders.</p>
+    </footer>
+
+</body>
+
+</html>
