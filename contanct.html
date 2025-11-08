@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Footer - SON Robotics</title>
+    <style>
+        /* Footer Styles - Universal for all pages */
+        .universal-footer {
+            background: linear-gradient(to top, #000, #0f2027);
+            padding: 50px 20px 20px;
+            margin-top: 80px;
+            border-top: 3px solid #00ffcc;
+            color: white;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: #00ffcc;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00ffcc;
+            padding-bottom: 10px;
+        }
+
+        .footer-column p,
+        .footer-column li {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li:before {
+            content: "▸";
+            color: #00ffcc;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .footer-links a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 5px 0;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+
+        .terms-box {
+            background: rgba(0, 255, 204, 0.05);
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .terms-box h4 {
+            color: #00ffcc;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .terms-box ul {
+            padding-left: 20px;
+        }
+
+        .terms-box li {
+            margin-bottom: 8px;
+            color: #aaa;
+        }
+
+        .social-footer {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(0, 255, 204, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 1.3em;
+            border: 1px solid #00ffcc;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: #00ffcc;
+            color: #0f2027;
+            transform: scale(1.1);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0, 255, 204, 0.3);
+            text-align: center;
+        }
+
+        .copyright {
+            color: #00ffcc;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .footer-legal {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .footer-legal a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95em;
+        }
+
+        .footer-legal a:hover {
+            color: #00ffcc;
+        }
+
+        .disclaimer {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            color: #ff6b6b;
+            font-size: 0.9em;
+            text-align: left;
+        }
+
+        .contact-highlight {
+            background: rgba(0, 255, 204, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #00ffcc;
+            margin-top: 15px;
+        }
+
+        .contact-highlight strong {
+            color: #00ffcc;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-legal {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .social-footer {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- UNIVERSAL FOOTER - Weka hii kwenye kila page kabla ya </body> tag -->
+<footer class="universal-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- About Section -->
+            <div class="footer-column">
+                <h3> About SON Robotics</h3>
+                <p>SON Robotics & Cybersecurity is a leading innovation hub empowering youth and professionals with cutting-edge skills in robotics, cybersecurity, and AI technology.</p>
+                <p><strong>Mission:</strong> Creating a safer digital future through education and innovation.</p>
+                
+                <div class="contact-highlight">
+                    <p><strong>Instagram Accounts:</strong></p>
+                    <p> @son_gawcho.10</p>
+                    <p> @nelsonlwekela</p>
+                </div>
+
+                <div class="social-footer">
+                    <a href="#" class="social-icon" title="Facebook"></a>
+                    <a href="https://instagram.com/son_gawcho.10" class="social-icon" title="Instagram - SON"></a>
+                    <a href="https://instagram.com/nelsonlwekela" class="social-icon" title="Instagram - Nelson"></a>
+                    <a href="#" class="social-icon" title="Twitter"></a>
+                    <a href="#" class="social-icon" title="LinkedIn"></a>
+                    <a href="#" class="social-icon" title="YouTube"></a>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="footer-column">
+                <h3> Contact Information</h3>
+                <ul>
+                    <li><strong> Location:</strong> 123 Security Plaza, Cyber City, Dar es Salaam, Tanzania</li>
+                    <li><strong> Phone:</strong> 0615925002 or 0616265002</li>
+                    <li><strong> Email:</strong> sondegawcho@gmail.com</li>
+                </ul>
+
+                <div class="contact-highlight">
+                    <p><strong> Founder & Chief Technology Officer</strong></p>
+                    <p style="font-size: 1.1em; color: #00ffcc;">Nelson Richard Lwekela</p>
+                    <p style="font-size: 0.9em; color: #aaa; margin-top: 8px;">Expert in Cybersecurity, Robotics & AI with over 10 years of experience in technology innovation and education.</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-column footer-links">
+                <h3> Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"> Home</a></li>
+                    <li><a href="robotics.html"> Robotics</a></li>
+                    <li><a href="cyber3.html"> Cybersecurity</a></li>
+                    <li><a href="tech.html"> Technology Hub</a></li>
+                    <li><a href="worksop.html"> Workshops</a></li>
+                    <li><a href="projects.html"> Projects</a></li>
+                    <li><a href="faq.html"> FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Terms & Guidelines -->
+            <div class="footer-column">
+                <h3> Website Guidelines</h3>
+                <div class="terms-box">
+                    <h4> User Responsibilities:</h4>
+                    <ul>
+                        <li>Use website content for educational purposes only</li>
+                        <li>Do not copy or redistribute materials without permission</li>
+                        <li>Respect intellectual property rights</li>
+                        <li>Report any security vulnerabilities responsibly</li>
+                        <li>Provide accurate information during registration</li>
+                    </ul>
+                </div>
+                
+                <div class="terms-box" style="margin-top: 15px;">
+                    <h4>Prohibited Activities:</h4>
+                    <ul>
+                        <li>Attempting to hack or compromise the website</li>
+                        <li>Sharing login credentials with others</li>
+                        <li>Distributing malicious software or links</li>
+                        <li>Harassment or inappropriate behavior</li>
+                        <li>Commercial use without authorization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy & Terms Section -->
+        <div class="terms-box" style="margin-top: 30px;">
+            <h3 style="color: #00ffcc; margin-bottom: 15px;"> Privacy & Terms of Service</h3>
+            <p><strong>Data Collection:</strong> We collect personal information (name, email, phone) only for workshop registration and communication purposes. Your data is never shared with third parties without consent.</p>
+            
+            <p><strong>Cookie Policy:</strong> This website uses cookies to improve user experience. By using this site, you consent to our cookie policy.</p>
+            
+            <p><strong>Content Usage:</strong> All educational materials, code examples, and tutorials are provided for learning purposes. Commercial use requires written permission from SON Robotics.</p>
+            
+            <p><strong>Intellectual Property:</strong> All content, logos, and materials on this website are protected by copyright law. Unauthorized reproduction is prohibited.</p>
+            
+            <p><strong>Workshop Policy:</strong> Workshop fees are non-refundable within 48 hours of the start date. We reserve the right to cancel workshops due to insufficient enrollment with full refunds.</p>
+            
+            <p><strong>Liability Disclaimer:</strong> While we strive for accuracy, SON Robotics is not liable for any errors in content or outcomes from applying techniques learned through our platform.</p>
+        </div>
+
+        <!-- Disclaimer Box -->
+        <div class="disclaimer">
+            <strong> Important Disclaimer:</strong> The cybersecurity techniques taught in our courses are for educational and defensive purposes only. Unauthorized hacking, penetration testing without permission, or any illegal activity is strictly prohibited and may result in criminal prosecution. Always obtain proper authorization before testing systems.
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 SON Robotics & Cybersecurity. All Rights Reserved.</p>
+            <p style="color: #aaa; font-size: 0.95em;">
+                Designed & Developed by <strong style="color: #00ffcc;">Nelson Richard Lwekela</strong> | Empowering Innovation Through Technology
+            </p>
+            
+            <div class="footer-legal">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#cookie">Cookie Policy</a>
+                <a href="#refund">Refund Policy</a>
+                <a href="#contact">Report Issue</a>
+            </div>
+            
+            <p style="color: #666; font-size: 0.85em; margin-top: 20px;">
+                Last Updated: November 8, 2025 | Version 1.0
+            </p>
+            
+            <div style="margin-top: 25px; padding: 20px; background: rgba(0, 255, 204, 0.05); border-radius: 10px; border: 1px solid rgba(0, 255, 204, 0.2);">
+                <p style="color: #00ffcc; font-weight: bold; margin-bottom: 10px;"> Get in Touch:</p>
+                <p style="color: #ccc; font-size: 0.95em;">
+                    For inquiries, collaborations, or support, contact us at:<br>
+                    <strong style="color: #00ffcc;"> 0615925002 / 0616265002</strong><br>
+                    <strong style="color: #00ffcc;"> sondegawcho@gmail.com</strong><br>
+                    <strong style="color: #00ffcc;"> Instagram: @son_gawcho.10 | @nelsonlwekela</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
