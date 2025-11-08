@@ -19,7 +19,6 @@
             color: white;
             line-height: 1.6;
         }
-        /* --- ADDED FOR LOGO --- */
         
         .header-logo {
             width: 150px;
@@ -29,16 +28,13 @@
             box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
             animation: glow 2s ease-in-out infinite alternate;
         }
-        /* ------------------------ */
         
         header {
             text-align: center;
             padding: 60px 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            position: sticky;
-            top: 0;
+            background-color: transparent;
+            position: relative;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
         
         header h1 {
@@ -304,6 +300,16 @@
             border-radius: 5px;
             border: 1px solid #00ffcc;
         }
+
+        .footer-section {
+            margin-bottom: 30px;
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #00ffcc;
+        }
         
         @media (max-width: 768px) {
             header h1 {
@@ -566,37 +572,37 @@
 
             <div class="feature-grid">
                 <div class="feature-card">
-                    <h4>🚗 Autonomous Navigation Robot</h4>
+                    <h4> Autonomous Navigation Robot</h4>
                     <p>Build a robot that can navigate indoor environments using LIDAR and SLAM algorithms.</p>
                     <strong>Components:</strong> Raspberry Pi, LIDAR, IMU, wheel encoders, ROS
                 </div>
 
                 <div class="feature-card">
-                    <h4>🦾 6-Axis Robotic Arm</h4>
+                    <h4> 6-Axis Robotic Arm</h4>
                     <p>Design and program an industrial-grade robotic arm with inverse kinematics control.</p>
                     <strong>Components:</strong> Servo motors, Arduino Mega, custom PCB, 3D printed parts
                 </div>
 
                 <div class="feature-card">
-                    <h4>🌾 Agricultural Monitoring Drone</h4>
+                    <h4> Agricultural Monitoring Drone</h4>
                     <p>Create a drone for crop monitoring with multispectral imaging and GPS waypoint navigation.</p>
                     <strong>Components:</strong> Flight controller, GPS, multispectral camera, telemetry
                 </div>
 
                 <div class="feature-card">
-                    <h4>🏥 Telemedicine Robot</h4>
+                    <h4> Telemedicine Robot</h4>
                     <p>Develop a telepresence robot for remote healthcare consultations with video streaming.</p>
                     <strong>Components:</strong> Raspberry Pi, camera, microphone, motor controllers, touchscreen
                 </div>
 
                 <div class="feature-card">
-                    <h4>🔍 Object Sorting System</h4>
+                    <h4> Object Sorting System</h4>
                     <p>Build an automated sorting system using computer vision and conveyor belt control.</p>
                     <strong>Components:</strong> Camera, conveyor motors, pneumatic actuators, PLC/Arduino
                 </div>
 
                 <div class="feature-card">
-                    <h4>🤖 Humanoid Social Robot</h4>
+                    <h4> Humanoid Social Robot</h4>
                     <p>Create an interactive humanoid robot with facial recognition and natural conversation abilities.</p>
                     <strong>Components:</strong> Servo motors, camera, microphone, speaker, AI processing unit
                 </div>
@@ -606,7 +612,7 @@
         <section id="applications">
             <h2>Real-World Robotics Applications</h2>
 
-            <h3>🏭 Industrial Automation</h3>
+            <h3> Industrial Automation</h3>
             <ul>
                 <li><strong>Manufacturing:</strong> Assembly line robots, welding robots, painting and coating systems</li>
                 <li><strong>Quality Control:</strong> Automated inspection systems using machine vision</li>
@@ -614,7 +620,7 @@
                 <li><strong>Packaging:</strong> High-speed packaging and palletizing robots</li>
             </ul>
 
-            <h3>🏥 Healthcare & Medical</h3>
+            <h3> Healthcare & Medical</h3>
             <ul>
                 <li><strong>Surgical Robots:</strong> Minimally invasive surgery systems (da Vinci Surgical System)</li>
                 <li><strong>Rehabilitation:</strong> Exoskeletons and therapy robots for patient recovery</li>
@@ -622,7 +628,7 @@
                 <li><strong>Disinfection:</strong> UV-C sterilization robots for hospitals</li>
             </ul>
 
-            <h3>🌾 Agriculture</h3>
+            <h3> Agriculture</h3>
             <ul>
                 <li><strong>Precision Farming:</strong> Autonomous tractors and harvesting machines</li>
                 <li><strong>Crop Monitoring:</strong> Drones with multispectral cameras for health assessment</li>
@@ -630,7 +636,7 @@
                 <li><strong>Fruit Picking:</strong> Robotic harvesters with gentle gripping systems</li>
             </ul>
 
-            <h3>🎓 Education</h3>
+            <h3> Education</h3>
             <ul>
                 <li><strong>STEM Learning:</strong> Educational robot kits for schools and universities</li>
                 <li><strong>Competitions:</strong> FIRST Robotics, RoboCup, VEX Robotics competitions</li>
@@ -646,7 +652,7 @@
                 <li><strong>Delivery:</strong> Last-mile delivery robots and drones</li>
             </ul>
 
-            <h3>🚀 Space & Exploration</h3>
+            <h3> Space & Exploration</h3>
             <ul>
                 <li><strong>Mars Rovers:</strong> Autonomous exploration vehicles (Perseverance, Curiosity)</li>
                 <li><strong>Space Station Robots:</strong> Robonaut, CIMON for astronaut assistance</li>
@@ -658,72 +664,31 @@
         <section id="resources">
             <h2>Learning Resources & Tools</h2>
 
-            <h3>📚 Online Courses & Platforms</h3>
+            <h3> Online Courses & Platforms</h3>
             <a href="https://www.coursera.org/courses?query=robotics" target="_blank" class="resource-link">Coursera Robotics</a>
             <a href="https://www.edx.org/learn/robotics" target="_blank" class="resource-link">edX Robotics Courses</a>
             <a href="https://www.udacity.com/course/robotics-software-engineer--nd209" target="_blank" class="resource-link">Udacity Robotics Nanodegree</a>
             <a href="https://www.nvidia.com/en-us/learn/learning-path/robotics/" target="_blank" class="resource-link">NVIDIA Robotics Path</a>
 
-            <h3>🛠️ Simulation & Development Tools</h3>
+            <h3>Simulation & Development Tools</h3>
             <a href="https://gazebosim.org/" target="_blank" class="resource-link">Gazebo Simulator</a>
             <a href="https://www.coppeliarobotics.com/" target="_blank" class="resource-link">CoppeliaSim (V-REP)</a>
             <a href="https://www.webots.cloud/" target="_blank" class="resource-link">Webots Robot Simulator</a>
             <a href="https://robodk.com/" target="_blank" class="resource-link">RoboDK</a>
             <a href="https://www.mathworks.com/products/matlab.html" target="_blank" class="resource-link">MATLAB Robotics Toolbox</a>
 
-            <h3>📖 Documentation & References</h3>
+            <h3> Documentation & References</h3>
             <a href="https://docs.ros.org/" target="_blank" class="resource-link">ROS Documentation</a>
             <a href="https://www.arduino.cc/reference/en/" target="_blank" class="resource-link">Arduino Reference</a>
             <a href="https://docs.opencv.org/" target="_blank" class="resource-link">OpenCV Documentation</a>
             <a href="https://www.raspberrypi.com/documentation/" target="_blank" class="resource-link">Raspberry Pi Docs</a>
 
-            <h3>🎥 YouTube Channels</h3>
+            <h3> YouTube Channels</h3>
             <a href="https://www.youtube.com/@jamesbruton" target="_blank" class="resource-link">James Bruton</a>
             <a href="https://www.youtube.com/@RealEngineering" target="_blank" class="resource-link">Real Engineering</a>
             <a href="https://www.youtube.com/@BostonDynamics" target="_blank" class="resource-link">Boston Dynamics</a>
             <a href="https://www.youtube.com/@Hacksmith" target="_blank" class="resource-link">Hacksmith Industries</a>
 
-            <h3>🛒 Hardware Suppliers</h3>
+            <h3> Hardware Suppliers</h3>
             <a href="https://www.sparkfun.com/" target="_blank" class="resource-link">SparkFun</a>
-            <a href="https://www.adafruit.com/" target="_blank" class="resource-link">Adafruit</a>
-            <a href="https://www.pololu.com/" target="_blank" class="resource-link">Pololu</a>
-            <a href="https://www.robotshop.com/" target="_blank" class="resource-link">RobotShop</a>
-            <a href="https://www.digikey.com/" target="_blank" class="resource-link">DigiKey</a>
-        </section>
-
-        <section id="demo">
-            <h2>Interactive Robotics Demo</h2>
-            <div class="interactive-demo">
-                <h3>Virtual Robot Simulator</h3>
-                <p>Experience basic robot control concepts with our interactive demo</p>
-
-                <button class="demo-button" onclick="simulateRobot('forward')">Move Forward ↑</button>
-                <button class="demo-button" onclick="simulateRobot('left')">Turn Left ←</button>
-                <button class="demo-button" onclick="simulateRobot('right')">Turn Right →</button>
-                <button class="demo-button" onclick="simulateRobot('sensor')">Read Sensors 📡</button>
-
-                <div class="demo-output" id="demoOutput"></div>
-            </div>
-            <footer id="contact">
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>📍 123 Security Plaza, Cyber City</p>
-                    <p>📞 0616265002 or 0615925002</p>
-                    <p>✉️ sondegawcho@gmail.com</p>
-                    <p>✉️ nelsonlwekela@gmail.com</p>
-                    <p>👤 Coordinator: Nelson Richard Lwekela</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <p>Stay connected with us on social media for updates and cybersecurity tips.</p>
-                    <p><strong>Instagram:</strong> @son_gawcho.10</p>
-
-                </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 SON cybersecurity Academy. All rights reserved. | Privacy Policy | Terms of Service</p>
-                </div>
-            </footer>
-</body>
-
-</html>
+            <a href="https://www.adafruit.com/" target="_blank" class="resource-link
