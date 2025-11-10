@@ -14,131 +14,108 @@
     
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
       line-height: 1.6;
     }
     
-    /* Animated Background */
-    .particles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.15;
-    }
-    
-    .particle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #00d9ff;
-      border-radius: 50%;
-      animation: float 15s infinite;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
-    }
-    
-    /* Header */
+    /* Header - Matching other pages */
     header {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(15, 52, 96, 0.9));
-      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 20px 15px 15px;
       position: sticky;
       top: 0;
       z-index: 100;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-      border-bottom: 3px solid #00d9ff;
-      backdrop-filter: blur(10px);
+      border-bottom: 2px solid #00ffcc;
     }
     
     .header-content {
       max-width: 1200px;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      text-align: center;
     }
     
-    .logo {
-      display: flex;
+    .logo-container {
+      display: inline-flex;
+      flex-direction: column;
       align-items: center;
-      gap: 15px;
+      background: rgba(15, 32, 39, 0.9);
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid #00ffcc;
+      box-shadow: 0 0 30px rgba(0, 255, 204, 0.4);
+      margin-bottom: 10px;
+      animation: glow 2s ease-in-out infinite;
     }
     
-    .logo-icon {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, #00d9ff, #0099cc);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2em;
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 204, 0.4); }
+      50% { box-shadow: 0 0 40px rgba(0, 255, 204, 0.8); }
+    }
+    
+    .logo-text {
+      font-family: 'Arial Black', Arial, sans-serif;
       font-weight: bold;
-      box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
-      animation: pulse 2s infinite;
+      color: #00ffcc;
+      text-shadow: 0 0 15px rgba(0, 255, 204, 0.9);
+      line-height: 1.1;
     }
     
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 20px rgba(0, 217, 255, 0.5); }
-      50% { box-shadow: 0 0 40px rgba(0, 217, 255, 0.8); }
-    }
+    .logo-text.son { font-size: 28px; }
+    .logo-text.workshops { font-size: 13px; margin-top: 3px; }
     
-    .logo-text h1 {
-      font-size: 1.8em;
-      color: #00d9ff;
-      text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
-    }
-    
-    .logo-text p {
-      font-size: 0.9em;
-      color: #aaa;
+    header h1 {
+      font-size: 1.5em;
+      margin: 10px 0 8px;
+      color: #00ffcc;
+      text-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
     }
     
     nav ul {
       list-style: none;
+      padding: 0;
       display: flex;
-      gap: 25px;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 5px;
     }
     
+    nav li { display: inline; }
+    
     nav a {
-      color: #00d9ff;
+      color: #00ffcc;
       text-decoration: none;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.85em;
+      padding: 6px 10px;
+      border-radius: 5px;
       transition: all 0.3s ease;
+      display: inline-block;
       border: 1px solid transparent;
     }
     
     nav a:hover {
-      background: rgba(0, 217, 255, 0.2);
-      border-color: #00d9ff;
+      color: white;
+      background: rgba(0, 255, 204, 0.2);
+      border-color: #00ffcc;
       transform: translateY(-2px);
     }
     
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(15, 52, 96, 0.3));
-      padding: 80px 20px;
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.1), rgba(15, 52, 96, 0.3));
+      padding: 60px 20px;
       text-align: center;
-      border-bottom: 2px solid #00d9ff;
+      border-bottom: 2px solid #00ffcc;
     }
     
     .hero h2 {
-      font-size: 3em;
-      color: #00d9ff;
+      font-size: 2.5em;
+      color: #00ffcc;
       margin-bottom: 20px;
-      text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+      text-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
       animation: fadeInDown 1s ease;
     }
     
@@ -148,7 +125,7 @@
     }
     
     .hero p {
-      font-size: 1.3em;
+      font-size: 1.2em;
       max-width: 800px;
       margin: 0 auto 30px;
       color: #ccc;
@@ -162,36 +139,36 @@
     }
     
     .btn {
-      padding: 15px 35px;
+      padding: 12px 30px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1em;
       transition: all 0.3s ease;
       display: inline-block;
       border: 2px solid transparent;
     }
     
     .btn-primary {
-      background: #00d9ff;
-      color: #1a1a2e;
-      box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4);
+      background: #00ffcc;
+      color: #0f2027;
+      box-shadow: 0 5px 20px rgba(0, 255, 204, 0.4);
     }
     
     .btn-primary:hover {
-      background: #00b8d4;
+      background: #00ddaa;
       transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(0, 217, 255, 0.6);
+      box-shadow: 0 8px 30px rgba(0, 255, 204, 0.6);
     }
     
     .btn-secondary {
       background: transparent;
-      color: #00d9ff;
-      border-color: #00d9ff;
+      color: #00ffcc;
+      border-color: #00ffcc;
     }
     
     .btn-secondary:hover {
-      background: rgba(0, 217, 255, 0.1);
+      background: rgba(0, 255, 204, 0.1);
       transform: translateY(-3px);
     }
     
@@ -199,97 +176,125 @@
     main {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
     
     section {
-      margin-bottom: 80px;
+      margin-bottom: 70px;
     }
     
     .section-header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
     
     .section-header h2 {
-      font-size: 2.5em;
-      color: #00d9ff;
+      font-size: 2.2em;
+      color: #00ffcc;
       margin-bottom: 15px;
-      text-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+      text-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
     }
     
     .section-header p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #aaa;
       max-width: 700px;
       margin: 0 auto;
     }
     
+    /* Stats Section */
+    .stats-section {
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.1), rgba(15, 52, 96, 0.2));
+      padding: 50px 20px;
+      border-radius: 15px;
+      margin: 50px 0;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .stat-box {
+      text-align: center;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      border: 2px solid #00ffcc;
+      transition: all 0.3s ease;
+    }
+    
+    .stat-box:hover {
+      transform: scale(1.05);
+      border-color: #00ffcc;
+      box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+    }
+    
+    .stat-number {
+      font-size: 2.5em;
+      color: #00ffcc;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .stat-label {
+      color: #ccc;
+      font-size: 1em;
+    }
+    
     /* Workshop Cards */
     .workshop-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
       margin-top: 40px;
     }
     
     .workshop-card {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(15, 52, 96, 0.4));
+      background: rgba(255, 255, 255, 0.05);
       border-radius: 15px;
       overflow: hidden;
-      border: 1px solid rgba(0, 217, 255, 0.3);
+      border: 2px solid #00ffcc;
       transition: all 0.4s ease;
-      position: relative;
     }
     
     .workshop-card:hover {
       transform: translateY(-10px);
-      border-color: #00d9ff;
-      box-shadow: 0 15px 40px rgba(0, 217, 255, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 255, 204, 0.3);
+      background: rgba(0, 255, 204, 0.05);
     }
     
     .workshop-header {
-      background: linear-gradient(135deg, #00d9ff, #0088cc);
-      padding: 30px;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .workshop-header::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
-      animation: shimmer 3s infinite;
-    }
-    
-    @keyframes shimmer {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(-30px, -30px); }
+      background: linear-gradient(135deg, #00ffcc, #00aa99);
+      padding: 25px;
+      color: #0f2027;
     }
     
     .workshop-category {
       display: inline-block;
-      background: rgba(26, 26, 46, 0.8);
-      padding: 6px 15px;
-      border-radius: 20px;
-      font-size: 0.85em;
+      background: rgba(15, 32, 39, 0.8);
+      color: #00ffcc;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.8em;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     
     .workshop-title {
-      font-size: 1.6em;
-      color: white;
-      margin-bottom: 10px;
+      font-size: 1.5em;
+      color: #0f2027;
+      margin-bottom: 8px;
+      font-weight: bold;
     }
     
     .workshop-date {
-      font-size: 0.95em;
-      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.9em;
+      color: #0f2027;
     }
     
     .workshop-body {
@@ -305,24 +310,25 @@
     .workshop-details {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 20px;
       padding: 15px;
       background: rgba(0, 0, 0, 0.3);
       border-radius: 8px;
+      border-left: 3px solid #00ffcc;
     }
     
     .detail-item {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #aaa;
+      color: #ccc;
+      font-size: 0.95em;
     }
     
     .detail-icon {
-      color: #00d9ff;
+      color: #00ffcc;
       font-weight: bold;
-      width: 20px;
     }
     
     .workshop-features {
@@ -330,8 +336,8 @@
     }
     
     .workshop-features h4 {
-      color: #00d9ff;
-      margin-bottom: 10px;
+      color: #00ffcc;
+      margin-bottom: 12px;
       font-size: 1.1em;
     }
     
@@ -341,17 +347,18 @@
     }
     
     .workshop-features li {
-      padding: 8px 0;
+      padding: 6px 0;
       color: #ccc;
       position: relative;
       padding-left: 25px;
+      font-size: 0.95em;
     }
     
     .workshop-features li:before {
       content: "✓";
       position: absolute;
       left: 0;
-      color: #00d9ff;
+      color: #00ffcc;
       font-weight: bold;
     }
     
@@ -360,62 +367,104 @@
       justify-content: space-between;
       align-items: center;
       padding-top: 15px;
-      border-top: 1px solid rgba(0, 217, 255, 0.2);
+      border-top: 1px solid rgba(0, 255, 204, 0.3);
     }
     
     .workshop-price {
-      font-size: 1.8em;
-      color: #00d9ff;
+      font-size: 1.6em;
+      color: #00ffcc;
       font-weight: bold;
     }
     
     .workshop-price span {
-      font-size: 0.5em;
+      font-size: 0.6em;
       color: #aaa;
       font-weight: normal;
     }
     
-    /* Filter Section */
+    /* Filter Bar */
     .filter-bar {
       background: rgba(0, 0, 0, 0.4);
-      padding: 25px;
+      padding: 20px;
       border-radius: 12px;
       margin-bottom: 40px;
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
       align-items: center;
-      border: 1px solid rgba(0, 217, 255, 0.2);
+      border: 1px solid rgba(0, 255, 204, 0.3);
     }
     
     .filter-group {
       flex: 1;
-      min-width: 200px;
+      min-width: 180px;
     }
     
     .filter-group label {
       display: block;
-      color: #00d9ff;
+      color: #00ffcc;
       margin-bottom: 8px;
       font-weight: 600;
+      font-size: 0.95em;
     }
     
     .filter-group select {
       width: 100%;
       padding: 10px;
       border-radius: 6px;
-      border: 1px solid #00d9ff;
+      border: 1px solid #00ffcc;
       background: rgba(0, 0, 0, 0.5);
       color: white;
-      font-size: 1em;
+      font-size: 0.95em;
+    }
+    
+    /* Benefits Section */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    
+    .benefit-card {
+      background: rgba(0, 255, 204, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 255, 204, 0.3);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      border-color: #00ffcc;
+      box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+      background: rgba(0, 255, 204, 0.1);
+    }
+    
+    .benefit-icon {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+    
+    .benefit-card h3 {
+      color: #00ffcc;
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+    
+    .benefit-card p {
+      color: #ccc;
+      line-height: 1.6;
+      font-size: 0.95em;
     }
     
     /* Registration Form */
     .registration-form {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(15, 52, 96, 0.4));
-      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 35px;
       border-radius: 15px;
-      border: 2px solid #00d9ff;
+      border: 2px solid #00ffcc;
       max-width: 700px;
       margin: 0 auto;
     }
@@ -433,9 +482,10 @@
     }
     
     .form-group label {
-      color: #00d9ff;
+      color: #00ffcc;
       margin-bottom: 8px;
       font-weight: 600;
+      font-size: 0.95em;
     }
     
     .form-group input,
@@ -443,10 +493,10 @@
     .form-group textarea {
       padding: 12px;
       border-radius: 6px;
-      border: 1px solid #00d9ff;
+      border: 1px solid #00ffcc;
       background: rgba(0, 0, 0, 0.5);
       color: white;
-      font-size: 1em;
+      font-size: 0.95em;
       font-family: inherit;
     }
     
@@ -454,7 +504,7 @@
     .form-group select:focus,
     .form-group textarea:focus {
       outline: none;
-      box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
     }
     
     .form-group textarea {
@@ -464,106 +514,7 @@
     
     .form-submit {
       text-align: center;
-      margin-top: 30px;
-    }
-    
-    /* Benefits Section */
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-    
-    .benefit-card {
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(15, 52, 96, 0.2));
-      padding: 30px;
-      border-radius: 12px;
-      border: 1px solid rgba(0, 217, 255, 0.3);
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-    
-    .benefit-card:hover {
-      transform: translateY(-5px);
-      border-color: #00d9ff;
-      box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
-    }
-    
-    .benefit-icon {
-      font-size: 3em;
-      margin-bottom: 15px;
-    }
-    
-    .benefit-card h3 {
-      color: #00d9ff;
-      margin-bottom: 15px;
-      font-size: 1.3em;
-    }
-    
-    .benefit-card p {
-      color: #ccc;
-      line-height: 1.7;
-    }
-    
-    /* Testimonials */
-    .testimonial-slider {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .testimonial {
-      background: rgba(0, 0, 0, 0.4);
-      padding: 30px;
-      border-radius: 12px;
-      border-left: 4px solid #00d9ff;
-      position: relative;
-    }
-    
-    .testimonial-quote {
-      font-size: 3em;
-      color: rgba(0, 217, 255, 0.3);
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-    
-    .testimonial-text {
-      color: #ccc;
-      font-style: italic;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    
-    .author-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00d9ff, #0088cc);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-    
-    .author-info h4 {
-      color: #00d9ff;
-      margin-bottom: 5px;
-    }
-    
-    .author-info p {
-      color: #aaa;
-      font-size: 0.9em;
+      margin-top: 25px;
     }
     
     /* FAQ Section */
@@ -576,27 +527,28 @@
       background: rgba(0, 0, 0, 0.4);
       margin-bottom: 15px;
       border-radius: 10px;
-      border: 1px solid rgba(0, 217, 255, 0.2);
+      border: 1px solid rgba(0, 255, 204, 0.3);
       overflow: hidden;
     }
     
     .faq-question {
-      padding: 20px;
+      padding: 18px;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: #00d9ff;
+      color: #00ffcc;
       font-weight: 600;
       transition: background 0.3s;
+      font-size: 0.95em;
     }
     
     .faq-question:hover {
-      background: rgba(0, 217, 255, 0.1);
+      background: rgba(0, 255, 204, 0.1);
     }
     
     .faq-toggle {
-      font-size: 1.5em;
+      font-size: 1.3em;
       transition: transform 0.3s;
     }
     
@@ -608,146 +560,97 @@
       max-height: 0;
       overflow: hidden;
       transition: all 0.3s ease;
-      padding: 0 20px;
+      padding: 0 18px;
       color: #ccc;
+      font-size: 0.9em;
     }
     
     .faq-item.active .faq-answer {
       max-height: 500px;
-      padding: 20px;
+      padding: 18px;
     }
     
-    /* Stats Section */
-    .stats-section {
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(15, 52, 96, 0.2));
-      padding: 60px 20px;
-      border-radius: 15px;
-      margin: 60px 0;
-    }
-    
-    .stats-grid {
+    /* Testimonials */
+    .testimonial-slider {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
     }
     
-    .stat-box {
-      text-align: center;
-      padding: 30px;
+    .testimonial {
       background: rgba(0, 0, 0, 0.4);
+      padding: 25px;
       border-radius: 12px;
-      border: 1px solid rgba(0, 217, 255, 0.3);
-      transition: all 0.3s ease;
+      border-left: 4px solid #00ffcc;
+      position: relative;
     }
     
-    .stat-box:hover {
-      transform: scale(1.05);
-      border-color: #00d9ff;
-      box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+    .testimonial-quote {
+      font-size: 2.5em;
+      color: rgba(0, 255, 204, 0.3);
+      position: absolute;
+      top: 15px;
+      left: 15px;
     }
     
-    .stat-number {
-      font-size: 3em;
-      color: #00d9ff;
-      font-weight: bold;
-      display: block;
-      margin-bottom: 10px;
-    }
-    
-    .stat-label {
+    .testimonial-text {
       color: #ccc;
-      font-size: 1.1em;
+      font-style: italic;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+      font-size: 0.95em;
+      line-height: 1.6;
     }
     
-    /* Footer */
-    footer {
-      background: linear-gradient(to top, #000, #1a1a2e);
-      padding: 60px 20px 30px;
-      margin-top: 80px;
-      border-top: 3px solid #00d9ff;
-    }
-    
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    
-    .footer-section h3 {
-      color: #00d9ff;
-      margin-bottom: 20px;
-      font-size: 1.3em;
-    }
-    
-    .footer-section p,
-    .footer-section li {
-      color: #aaa;
-      margin-bottom: 10px;
-      line-height: 1.7;
-    }
-    
-    .footer-section ul {
-      list-style: none;
-    }
-    
-    .footer-section a {
-      color: #aaa;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    .footer-section a:hover {
-      color: #00d9ff;
-    }
-    
-    .social-links {
+    .testimonial-author {
       display: flex;
-      gap: 15px;
-      margin-top: 20px;
+      align-items: center;
+      gap: 12px;
     }
     
-    .social-link {
+    .author-avatar {
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      background: rgba(0, 217, 255, 0.2);
+      background: linear-gradient(135deg, #00ffcc, #00aa99);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #00d9ff;
-      text-decoration: none;
-      font-size: 1.3em;
-      border: 1px solid #00d9ff;
-      transition: all 0.3s ease;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #0f2027;
     }
     
-    .social-link:hover {
-      background: #00d9ff;
-      color: #1a1a2e;
-      transform: scale(1.1);
+    .author-info h4 {
+      color: #00ffcc;
+      margin-bottom: 3px;
+      font-size: 1em;
     }
     
-    .footer-bottom {
-      text-align: center;
-      padding-top: 30px;
-      border-top: 1px solid rgba(0, 217, 255, 0.2);
+    .author-info p {
       color: #aaa;
+      font-size: 0.85em;
     }
     
     /* Responsive */
     @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
-        gap: 20px;
+      header {
+        padding: 15px 10px 12px;
       }
       
-      nav ul {
-        justify-content: center;
+      .logo-text.son { font-size: 24px; }
+      .logo-text.workshops { font-size: 11px; }
+      
+      header h1 { 
+        font-size: 1.3em;
+        margin-bottom: 6px;
+      }
+      
+      nav a {
+        font-size: 0.75em;
+        padding: 5px 8px;
       }
       
       .hero h2 {
@@ -761,31 +664,64 @@
       .filter-bar {
         flex-direction: column;
       }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo-text.son { font-size: 20px; }
+      .logo-text.workshops { font-size: 10px; }
+      
+      header h1 { font-size: 1.1em; }
+      .hero h2 { font-size: 1.7em; }
+    }
+
+    /* Hidden class for filtering */
+    .hidden {
+      display: none !important;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      border: 2px dashed rgba(0, 255, 204, 0.3);
+      margin-top: 40px;
+    }
+
+    .no-results h3 {
+      color: #00ffcc;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .no-results p {
+      color: #aaa;
+      font-size: 1.1em;
     }
   </style>
 </head>
 <body>
-  <!-- Particles Background -->
-  <div class="particles" id="particles"></div>
   
   <!-- Header -->
   <header>
     <div class="header-content">
-      <div class="logo">
-        <div class="logo-icon"></div>
-        <div class="logo-text">
-          <h1>SON Workshops</h1>
-          <p>Learn • Grow • Excel</p>
-        </div>
+      <div class="logo-container">
+        <div class="logo-text son">SON</div>
+        <div class="logo-text workshops">WORKSHOPS</div>
       </div>
+      <h1>Professional Training & Development</h1>
       <nav>
         <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#workshops">Workshops</a></li>
           <li><a href="#benefits">Benefits</a></li>
           <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#register">Register</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="contanct">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -793,11 +729,11 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h2>Transform Your Future with Expert-Led Training</h2>
+    <h2> Transform Your Future with Expert-Led Training</h2>
     <p>Join thousands of professionals who have advanced their careers through our comprehensive workshops in Robotics, Cybersecurity, and AI Technologies.</p>
     <div class="cta-buttons">
       <a href="#workshops" class="btn btn-primary">Browse Workshops</a>
-      <a href="#register" class="btn btn-secondary">Get Started</a>
+      <a href="#register" class="btn btn-secondary">Register Today</a>
     </div>
   </section>
 
@@ -835,7 +771,7 @@
       <!-- Filter Bar -->
       <div class="filter-bar">
         <div class="filter-group">
-          <label>Category</label>
+          <label> Category</label>
           <select id="categoryFilter">
             <option value="all">All Categories</option>
             <option value="cybersecurity">Cybersecurity</option>
@@ -845,7 +781,7 @@
           </select>
         </div>
         <div class="filter-group">
-          <label>Level</label>
+          <label> Level</label>
           <select id="levelFilter">
             <option value="all">All Levels</option>
             <option value="beginner">Beginner</option>
@@ -854,7 +790,7 @@
           </select>
         </div>
         <div class="filter-group">
-          <label>Duration</label>
+          <label> Duration</label>
           <select id="durationFilter">
             <option value="all">Any Duration</option>
             <option value="short">1-2 Days</option>
@@ -867,7 +803,7 @@
       <!-- Workshop Cards -->
       <div class="workshop-grid">
         <!-- Workshop 1 -->
-        <div class="workshop-card">
+        <div class="workshop-card" data-category="cybersecurity" data-level="beginner" data-duration="short">
           <div class="workshop-header">
             <div class="workshop-category"> CYBERSECURITY</div>
             <h3 class="workshop-title">Ethical Hacking Fundamentals</h3>
@@ -904,14 +840,14 @@
               </ul>
             </div>
             <div class="workshop-footer">
-              <div class="workshop-price">$399<span>/person</span></div>
+              <div class="workshop-price">TZS 900K<span>/person</span></div>
               <a href="#register" class="btn btn-primary">Register Now</a>
             </div>
           </div>
         </div>
 
         <!-- Workshop 2 -->
-        <div class="workshop-card">
+        <div class="workshop-card" data-category="robotics" data-level="intermediate" data-duration="medium">
           <div class="workshop-header">
             <div class="workshop-category"> ROBOTICS</div>
             <h3 class="workshop-title">AI-Powered Robotics Development</h3>
@@ -926,6 +862,681 @@
               </div>
               <div class="detail-item">
                 <span class="detail-icon"></span>
-
                 <span>Intermediate</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Max 20 participants</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Certificate + Hardware Kit</span>
+              </div>
+            </div>
+            <div class="workshop-features">
+              <h4>What You'll Learn:</h4>
+              <ul>
+                <li>Arduino and Raspberry Pi programming</li>
+                <li>Sensor integration and data processing</li>
+                <li>Computer vision with OpenCV</li>
+                <li>Machine learning model deployment</li>
+                <li>Autonomous navigation algorithms</li>
+              </ul>
+            </div>
+            <div class="workshop-footer">
+              <div class="workshop-price">TZS 25k<span>/person</span></div>
+              <a href="#register" class="btn btn-primary">Register Now</a>
+            </div>
+          </div>
+        </div>
 
+        <!-- Workshop 3 -->
+        <div class="workshop-card" data-category="cybersecurity" data-level="advanced" data-duration="medium">
+          <div class="workshop-header">
+            <div class="workshop-category"> NETWORK SECURITY</div>
+            <h3 class="workshop-title">Advanced Network Security</h3>
+            <div class="workshop-date"> December 20-23, 2025</div>
+          </div>
+          <div class="workshop-body">
+            <p class="workshop-description">Deep dive into firewall configuration, intrusion detection systems, VPN tunneling, and network forensics. Protect enterprise networks from sophisticated attacks.</p>
+            <div class="workshop-details">
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>4 Days (32 hours)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Advanced</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Max 20 participants</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Professional Certificate</span>
+              </div>
+            </div>
+            <div class="workshop-features">
+              <h4>What You'll Learn:</h4>
+              <ul>
+                <li>Firewall configuration and management</li>
+                <li>IDS/IPS implementation</li>
+                <li>VPN tunneling and encryption</li>
+                <li>Network forensics and analysis</li>
+                <li>Security policy development</li>
+              </ul>
+            </div>
+            <div class="workshop-footer">
+              <div class="workshop-price">TZS 20k<span>/person</span></div>
+              <a href="#register" class="btn btn-primary">Register Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workshop 4 -->
+        <div class="workshop-card" data-category="iot" data-level="intermediate" data-duration="short">
+          <div class="workshop-header">
+            <div class="workshop-category"> IoT SECURITY</div>
+            <h3 class="workshop-title">IoT Security Fundamentals</h3>
+            <div class="workshop-date"> January 10-12, 2026</div>
+          </div>
+          <div class="workshop-body">
+            <p class="workshop-description">Protect Internet of Things devices and Industrial Control Systems from sophisticated cyber threats and remote attacks.</p>
+            <div class="workshop-details">
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>3 Days (24 hours)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Intermediate</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Max 20 participants</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Certificate included</span>
+              </div>
+            </div>
+            <div class="workshop-features">
+              <h4>What You'll Learn:</h4>
+              <ul>
+                <li>IoT architecture and protocols</li>
+                <li>Device firmware security</li>
+                <li>Network segmentation for IoT</li>
+                <li>ICS/SCADA security</li>
+                <li>Threat modeling for IoT systems</li>
+              </ul>
+            </div>
+            <div class="workshop-footer">
+              <div class="workshop-price">TZS 85K<span>/person</span></div>
+              <a href="#register" class="btn btn-primary">Register Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workshop 5 -->
+        <div class="workshop-card" data-category="ai" data-level="advanced" data-duration="medium">
+          <div class="workshop-header">
+            <div class="workshop-category"> ARTIFICIAL INTELLIGENCE</div>
+            <h3 class="workshop-title">Machine Learning for Cybersecurity</h3>
+            <div class="workshop-date"> January 25-28, 2026</div>
+          </div>
+          <div class="workshop-body">
+            <p class="workshop-description">Leverage AI and ML algorithms for threat detection, behavior analysis, and automated incident response systems.</p>
+            <div class="workshop-details">
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>4 Days (32 hours)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Advanced</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Max 15 participants</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Professional Certificate</span>
+              </div>
+            </div>
+            <div class="workshop-features">
+              <h4>What You'll Learn:</h4>
+              <ul>
+                <li>ML fundamentals for security</li>
+                <li>Anomaly detection algorithms</li>
+                <li>Malware classification using AI</li>
+                <li>Neural networks for threat prediction</li>
+                <li>Automated incident response</li>
+              </ul>
+            </div>
+            <div class="workshop-footer">
+              <div class="workshop-price">TZS 20k<span>/person</span></div>
+              <a href="#register" class="btn btn-primary">Register Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workshop 6 -->
+        <div class="workshop-card" data-category="robotics" data-level="advanced" data-duration="long">
+          <div class="workshop-header">
+            <div class="workshop-category"> INDUSTRIAL ROBOTICS</div>
+            <h3 class="workshop-title">Industrial Robotics & Automation</h3>
+            <div class="workshop-date"> February 8-14, 2026</div>
+          </div>
+          <div class="workshop-body">
+            <p class="workshop-description">Programming robotic arms, PLC integration, and implementing Industry 4.0 solutions for manufacturing environments.</p>
+            <div class="workshop-details">
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>6 Days (48 hours)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Intermediate to Advanced</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Max 15 participants</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Industry Certificate</span>
+              </div>
+            </div>
+            <div class="workshop-features">
+              <h4>What You'll Learn:</h4>
+              <ul>
+                <li>Robotic arm programming (ABB, KUKA)</li>
+                <li>PLC and SCADA integration</li>
+                <li>Inverse kinematics and path planning</li>
+                <li>Safety systems and protocols</li>
+                <li>Industry 4.0 implementation</li>
+              </ul>
+            </div>
+            <div class="workshop-footer">
+              <div class="workshop-price">TZS 12K<span>/person</span></div>
+              <a href="#register" class="btn btn-primary">Register Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workshop 7 -->
+        <div class="workshop-card" data-category="ai" data-level="beginner" data-duration="short">
+          <div class="workshop-header">
+            <div class="workshop-category"> AI BASICS</div>
+            <h3 class="workshop-title">Introduction to Artificial Intelligence</h3>
+            <div class="workshop-date"> February 22-24, 2026</div>
+          </div>
+          <div class="workshop-body">
+            <p class="workshop-description">Learn the fundamentals of AI, machine learning, and neural networks. Perfect for beginners entering the AI field.</p>
+            <div class="workshop-details">
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>3 Days (24 hours)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Beginner</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Max 30 participants</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Certificate included</span>
+              </div>
+            </div>
+            <div class="workshop-features">
+              <h4>What You'll Learn:</h4>
+              <ul>
+                <li>AI and ML fundamentals</li>
+                <li>Python for data science</li>
+                <li>Building your first neural network</li>
+                <li>Real-world AI applications</li>
+                <li>Ethics in AI development</li>
+              </ul>
+            </div>
+            <div class="workshop-footer">
+              <div class="workshop-price">TZS 750K<span>/person</span></div>
+              <a href="#register" class="btn btn-primary">Register Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workshop 8 -->
+        <div class="workshop-card" data-category="robotics" data-level="beginner" data-duration="short">
+          <div class="workshop-header">
+            <div class="workshop-category"> DRONE TECHNOLOGY</div>
+            <h3 class="workshop-title">Drone Technology & Programming</h3>
+            <div class="workshop-date"> March 10-12, 2026</div>
+          </div>
+          <div class="workshop-body">
+            <p class="workshop-description">Build, program, and deploy autonomous drones with GPS navigation, computer vision, and obstacle avoidance systems.</p>
+            <div class="workshop-details">
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>3 Days (24 hours)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Beginner to Intermediate</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Max 20 participants</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon"></span>
+                <span>Certificate + Drone Kit</span>
+              </div>
+            </div>
+            <div class="workshop-features">
+              <h4>What You'll Learn:</h4>
+              <ul>
+                <li>Drone assembly and calibration</li>
+                <li>Flight controller programming</li>
+                <li>GPS waypoint navigation</li>
+                <li>Computer vision integration</li>
+                <li>Safety regulations and compliance</li>
+              </ul>
+            </div>
+            <div class="workshop-footer">
+              <div class="workshop-price">TZS 1.1M<span>/person</span></div>
+              <a href="#register" class="btn btn-primary">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div class="no-results hidden" id="noResults">
+        <h3> Hakuna Matokeo</h3>
+        <p>Samahani, hakuna workshop zinazolingana na chaguo lako. Jaribu kubadilisha filters.</p>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits">
+      <div class="section-header">
+        <h2> Why Choose SON Workshops?</h2>
+        <p>Discover the advantages of learning with us</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon"></div>
+          <h3>Expert Instructors</h3>
+          <p>Learn from industry professionals with 10+ years of real-world experience in robotics and cybersecurity.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"></div>
+          <h3>Hands-On Learning</h3>
+          <p>Practice with real equipment, tools, and scenarios. No theory-only sessions - build actual projects.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"></div>
+          <h3>Industry Certificates</h3>
+          <p>Earn recognized certificates that boost your career prospects and validate your skills to employers.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"></div>
+          <h3>Small Class Sizes</h3>
+          <p>Maximum 25 students per workshop ensures personalized attention and better learning outcomes.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"></div>
+          <h3>Job Placement Support</h3>
+          <p>Access our network of hiring partners and get career guidance from our placement team.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"></div>
+          <h3>Lifetime Community</h3>
+          <p>Join our alumni network for continued learning, collaboration, and professional networking.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+      <div class="section-header">
+        <h2> What Our Students Say</h2>
+        <p>Real feedback from professionals who transformed their careers</p>
+      </div>
+
+      <div class="testimonial-slider">
+        <div class="testimonial">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">The ethical hacking workshop completely changed my career. I went from IT support to a cybersecurity analyst role within 3 months. The hands-on training was invaluable!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">NL</div>
+            <div class="author-info">
+              <h4>Nelson Lwekela</h4>
+              <p>Cybersecurity Analyst, SafeNet TZ</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Best investment I've made in my education. The robotics workshop gave me practical skills I use every day. The instructors are patient and truly care about student success.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">EF</div>
+            <div class="author-info">
+              <h4>Edwine Faustine</h4>
+              <p>Robotics Engineer, InnoTech Solutions</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">I attended the AI workshop with zero programming experience. The beginner-friendly approach and supportive environment helped me build my first neural network. Highly recommended!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div class="author-info">
+              <h4>Athman Mwiha </h4>
+              <p>Data Scientist, Analytics Pro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register">
+      <div class="section-header">
+        <h2> Register for a Workshop</h2>
+        <p>Fill out the form below to secure your spot</p>
+      </div>
+
+      <div class="registration-form">
+        <form id="registrationForm" onsubmit="return handleRegistration(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+255 XXX XXX XXX" required>
+            </div>
+
+            <div class="form-group">
+              <label for="workshopSelect">Select Workshop *</label>
+              <select id="workshopSelect" name="workshop" required>
+                <option value="">Choose a workshop</option>
+                <option value="ethical-hacking">Ethical Hacking Fundamentals</option>
+                <option value="ai-robotics">AI-Powered Robotics Development</option>
+                <option value="network-security">Advanced Network Security</option>
+                <option value="iot-security">IoT Security Fundamentals</option>
+                <option value="ml-cybersecurity">Machine Learning for Cybersecurity</option>
+                <option value="industrial-robotics">Industrial Robotics & Automation</option>
+                <option value="ai-intro">Introduction to Artificial Intelligence</option>
+                <option value="drone-tech">Drone Technology & Programming</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="experience">Experience Level</label>
+              <select id="experience" name="experience">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company/Institution (Optional)</label>
+              <input type="text" id="company" name="company" placeholder="Your organization">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Information (Optional)</label>
+            <textarea id="message" name="message" placeholder="Any questions or special requirements?"></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Submit Registration</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <div class="section-header">
+        <h2>❓ Frequently Asked Questions</h2>
+        <p>Find answers to common questions about our workshops</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>What are the prerequisites for workshops?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Prerequisites vary by workshop level. Beginner workshops require no prior experience. Intermediate workshops require basic knowledge of the subject. Advanced workshops require substantial practical experience. Check each workshop description for specific requirements.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Do I need to bring my own laptop?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, participants should bring their own laptops. We recommend Windows or Linux systems with at least 8GB RAM. For robotics workshops, we provide hardware kits. Specific system requirements will be sent after registration.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>What is your refund policy?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Full refund if cancelled 7+ days before workshop start. 50% refund if cancelled 3-6 days before. No refund within 48 hours of start date. We reserve the right to cancel workshops with fewer than 10 participants with full refunds.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Will I receive a certificate?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! All participants who complete the workshop and pass the final assessment receive an industry-recognized certificate. Certificates include workshop details, duration, and skills acquired.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Do you offer group discounts?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! Groups of 5+ receive 10% discount, groups of 10+ receive 15% discount. Corporate training packages with custom content are also available. Contact us at sondegawcho@gmail.com for group rates.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Is accommodation provided?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Accommodation is not included in workshop fees. However, we can recommend affordable hotels near our training center. For multi-day workshops, we provide lunch and refreshments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3> About SON Robotics</h3>
+        <p>Leading innovation hub empowering professionals with cutting-edge skills in robotics, cybersecurity, and AI technology.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Facebook"></a>
+          <a href="https://instagram.com/son_gawcho.10" class="social-link" title="Instagram"></a>
+          <a href="https://instagram.com/nelsonlwekela" class="social-link" title="Instagram"></a>
+          <a href="#" class="social-link" title="LinkedIn"></a>
+          <a href="#" class="social-link" title="YouTube"></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>📞 Contact Us</h3>
+        <p><strong>📍 Location:</strong><br>123 Security Plaza, Cyber City<br>Dar es Salaam, Tanzania</p>
+        <p><strong>📱 Phone:</strong><br>0615925002 or 0616265002</p>
+        <p><strong>✉️ Email:</strong><br>sondegawcho@gmail.com</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>🔗 Quick Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 8px;"><a href="index.html">Home</a></li>
+          <li style="margin-bottom: 8px;"><a href="robotics.html">Robotics</a></li>
+          <li style="margin-bottom: 8px;"><a href="cyber3.html">Cybersecurity</a></li>
+          <li style="margin-bottom: 8px;"><a href="tech.html">Technology Hub</a></li>
+          <li style="margin-bottom: 8px;"><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3> Leadership</h3>
+        <p><strong style="color: #00ffcc;">Nelson Richard Lwekela</strong></p>
+        <p>Founder & Chief Technology Officer</p>
+        <p style="font-size: 0.9em; margin-top: 10px;">Expert in Cybersecurity, Robotics & AI with 10+ years of experience in technology innovation.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p style="color: #00ffcc; font-weight: bold; margin-bottom: 10px;">© 2025 SON Robotics & Cybersecurity. All Rights Reserved.</p>
+      <p style="color: #aaa; font-size: 0.9em;">Designed & Developed by Nelson Richard Lwekela | Empowering Innovation Through Technology</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Filtering and Interactions -->
+  <script>
+    // Filter Workshops
+    const categoryFilter = document.getElementById('categoryFilter');
+    const levelFilter = document.getElementById('levelFilter');
+    const durationFilter = document.getElementById('durationFilter');
+    const workshopCards = document.querySelectorAll('.workshop-card');
+    const noResults = document.getElementById('noResults');
+
+    function filterWorkshops() {
+      const selectedCategory = categoryFilter.value;
+      const selectedLevel = levelFilter.value;
+      const selectedDuration = durationFilter.value;
+      
+      let visibleCount = 0;
+
+      workshopCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        const cardLevel = card.getAttribute('data-level');
+        const cardDuration = card.getAttribute('data-duration');
+
+        const categoryMatch = selectedCategory === 'all' || cardCategory === selectedCategory;
+        const levelMatch = selectedLevel === 'all' || cardLevel === selectedLevel;
+        const durationMatch = selectedDuration === 'all' || cardDuration === selectedDuration;
+
+        if (categoryMatch && levelMatch && durationMatch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Show/hide no results message
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    // Event listeners for filters
+    categoryFilter.addEventListener('change', filterWorkshops);
+    levelFilter.addEventListener('change', filterWorkshops);
+    durationFilter.addEventListener('change', filterWorkshops);
+
+    // FAQ Toggle
+    function toggleFAQ(element) {
+      const faqItem = element.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all FAQs
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.faq-toggle').textContent = '+';
+      });
+      
+      // Open clicked FAQ if it wasn't active
+      if (!isActive) {
+        faqItem.classList.add('active');
+        element.querySelector('.faq-toggle').textContent = '−';
+      }
+    }
+
+    // Registration Form Handler
+    function handleRegistration(event) {
+      event.preventDefault();
+      
+      const fullName = document.getElementById('fullName').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const workshop = document.getElementById('workshopSelect').value;
+      
+      alert(`Thank you ${fullName}!\n\nYour registration has been received.\nWorkshop: ${workshop}\n\nWe'll contact you at:\n📧 ${email}\n📱 ${phone}\n\nPayment instructions will be sent within 24 hours.`);
+      
+      // Reset form
+      document.getElementById('registrationForm').reset();
+      
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      return false;
+    }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
