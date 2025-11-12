@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - SON ROBOTICS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.2), transparent);
+      animation: scan 3s infinite;
+    }
+    @keyframes scan {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px #00ffcc;
+      animation: glow 2s ease-in-out infinite;
+    }
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; }
+      50% { text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc; }
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a:hover {
+      color: #fff;
+      transform: scale(1.1);
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #00ffcc;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a.active {
+      color: #fff;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+    nav a.active::after {
+      width: 100%;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 0.8s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section-header {
+      display: inline-block;
+      padding: 10px 30px;
+      background: rgba(0, 255, 204, 0.1);
+      border-radius: 50px;
+      margin-bottom: 20px;
+      border: 2px solid #00ffcc;
+    }
+    /* Specific style for team headshots */
+    .logo-img { 
+        width: 100px; 
+        height: 100px; 
+        margin-bottom: 10px;
+        border-radius: 50%; 
+        object-fit: cover;
+        border: 3px solid #00ffcc;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logo-img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #00ffcc;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #00ffcc;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 800px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      text-align: left; 
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 255, 204, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+    .stat-box {
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.2), rgba(0, 255, 204, 0.05));
+      padding: 30px 15px;
+      border-radius: 15px;
+      border: 2px solid #00ffcc;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .stat-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(0, 255, 204, 0.4);
+    }
+    .stat-icon {
+        font-size: 2.5em;
+        color: #00ffcc;
+        margin-bottom: 10px;
+        text-shadow: 0 0 10px #00ffcc;
+    }
+    .founder-education-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px auto;
+        max-width: 500px;
+        text-align: left;
+    }
+    .founder-education-list li {
+        margin-bottom: 15px;
+        padding-left: 25px;
+        position: relative;
+    }
+    .founder-education-list li::before {
+        content: '>>'; 
+        position: absolute;
+        left: 0;
+        color: #00ffcc;
+        font-weight: bold;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, #00ffcc, #00cc99);
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      margin: 20px 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 255, 204, 0.4);
+    }
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 255, 204, 0.6);
+      background: linear-gradient(135deg, #00cc99, #00ffcc);
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-top: 50px;
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #00ffcc;
+      color: #000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .scroll-top.visible {
+      opacity: 1;
+    }
+    .scroll-top:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SON ROBOTICS FOR THE FUTURE LIFE</h1>
+    <p>Empowering youth through Robotics, Programming, and Cyber Security</p>
+    
+    <nav>
+      <a href="new vision.html">Home</a>
+      <a href="robotics.html">Robotics</a>
+      <a href="tech.html">Technology</a>
+      <a href="worksop.html">Workshop</a>
+      <a href="new vision.html#impact">Impact</a>
+      <a href="about-us.html" class="active">About Us</a> 
+      <a href="faq.html">FAQ</a> 
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="section-header">
+      <h2>👤 SON ROBOTICS: Who We Are</h2>
+    </div>
+
+    <div class="card">
+      <h3>Building Futures, One Robot at a Time.</h3>
+      <p>At **SON Robotics**, our core mission is to **bridge the gap** between classroom theory and real-world application. We provide immersive, hands-on education in **Robotics, Programming, and Cybersecurity** to empower the next generation of innovators.</p>
+      <p>We believe every young person should have the technical skills, creative confidence, and critical thinking abilities necessary to thrive in an increasingly automated world.</p>
+    </div>
+
+    <div class="section-header" style="margin-top: 50px;">
+      <h2>🌟 Our Guiding Core Values</h2>
+    </div>
+
+    <div class="stats-container">
+      <div class="stat-box">
+        <div class="stat-icon">⚡</div>
+        <h3 style="color: #00ffcc; margin-top: 0;">Excellence & Innovation</h3>
+        <p style="font-size: 0.9em;">We encourage experimentation and view mistakes as a crucial part of learning and invention.</p>
+      </div>
+      
+      <div class="stat-box">
+        <div class="stat-icon">🤝</div>
+        <h3 style="color: #00ffcc; margin-top: 0;">Collaboration</h3>
+        <p style="font-size: 0.9em;">Our students learn as a community, solving real-world challenges together.</p>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-icon">🌍</div>
+        <h3 style="color: #00ffcc; margin-top: 0;">Impact</h3>
+        <p style="font-size: 0.9em;">We focus on projects that address social or environmental needs, fostering responsible technology use.</p>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-icon">🔒</div>
+        <h3 style="color: #00ffcc; margin-top: 0;">Cyber Security</h3>
+        <p style="font-size: 0.9em;">We prioritize ethical hacking awareness and network security in all our programs.</p>
+      </div>
+    </div>
+
+
+    <div class="section-header" style="margin-top: 50px;">
+      <h2>🧠 Our Founder's Vision</h2>
+    </div>
+
+    <div class="card" style="max-width: 900px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <img src="path/to/nelson_headshot.jpg" alt="Nelson Richard Lwekela Headshot" class="logo-img" style="width: 150px; height: 150px; margin-bottom: 20px;"/>
+      <h3 style="color: #00ffcc; margin-top: 0;">Nelson Richard Lwekela</h3>
+      <p style="font-weight: bold; font-size: 1.2em;">Founder & Chief Robotics Architect</p>
+      
+      <div style="max-width: 600px; margin: 20px auto; text-align: center;">
+        <p>Nelson founded SON Robotics, fueled by his academic and technical journey:</p>
+        
+        <ul class="founder-education-list">
+            <li>
+                <strong>Primary Foundation:</strong> He received his primary education at **Rhuji Primary School**.
+            </li>
+            <li>
+                <strong>Secondary Education:</strong> He completed his O-Level at **Iwawa Secondary School** and A-Level at **Azania Secondary School**.
+            </li>
+            <li>
+                <strong>Higher Education & Expertise:</strong> He gained critical knowledge and technical expertise through the **Dar es Salaam Institute of Technology (DIT)** and the **University of Dar es Salaam (UDSM)**, which guides SON Robotics today.
+            </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="section-header" style="margin-top: 50px;">
+      <h2>🤝 Our Core Partners</h2>
+    </div>
+
+    <div class="stats-container" style="max-width: 700px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+      
+      <div class="stat-box">
+        <img src="path/to/shabani_image.jpg" alt="Shabani Mazengo Image" class="logo-img" style="width: 100px; height: 100px;"/>
+        <h3 style="color: #00ffcc; margin-top: 0;">Shabani Mazengo</h3>
+        <p style="font-weight: bold;">Lead Programmer (Partner)</p>
+        <p style="font-size: 0.9em;">A software development expert who ensures our coding curriculum is modern and of high quality.</p>
+      </div>
+
+      <div class="stat-box">
+        <img src="path/to/abnel_image.jpg" alt="Abnel Kilufi Image" class="logo-img" style="width: 100px; height: 100px;"/>
+        <h3 style="color: #00ffcc; margin-top: 0;">Abnel Kilufi</h3>
+        <p style="font-weight: bold;">Strategic Advisor (Partner)</p>
+        <p style="font-size: 0.9em;">Provides strategic guidance on educational outreach and market positioning for sustained growth.</p>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top: 50px;">
+      <h2>📞 Contact Us</h2>
+    </div>
+    <div class="card" style="text-align: center; max-width: 600px;">
+      <p>We are always ready to connect with parents, students, and partners. Contact us directly:</p>
+      
+      <p style="font-size: 1.1em; margin: 15px 0; text-align: left; padding-left: 20px;">
+          <strong style="color: #00ffcc;">📧 Email:</strong><br>
+          <a href="mailto:info@sonrobotics.com" style="color: #00ffcc; display: block; margin-bottom: 5px;">info@sonrobotics.com</a><br>
+          <a href="mailto:sondegawcho@gmail.com" style="color: #00ffcc; display: block;">sondegawcho@gmail.com</a>
+      </p>
+      
+      <p style="font-size: 1.1em; margin: 15px 0; text-align: left; padding-left: 20px;">
+          <strong style="color: #00ffcc;">📱 Phone:</strong><br>
+          <span style="display: block; margin-bottom: 5px;">0616265002</span><br>
+          <span style="display: block;">0615925002</span>
+      </p>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <a href="worksop.html" class="cta-button">View Our Workshops</a>
+      <a href="contact.html" class="cta-button" style="background: linear-gradient(135deg, #fff, #ddd); color: #0f2027;">Send Us a Message</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SON ROBOTICS. All rights reserved.</p>
+    <p>Empowering the next generation of innovators.</p>
+  </footer>
+
+  <div class="scroll-top" onclick="scrollToTop()">▲</div>
+
+  <script>
+    // Scroll-to-Top Functionality
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    
+    window.onscroll = () => {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    };
+    
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+</html>
