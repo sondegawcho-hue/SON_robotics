@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us - SON ROBOTICS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.2), transparent);
+      animation: scan 3s infinite;
+    }
+    @keyframes scan {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px #00ffcc;
+      animation: glow 2s ease-in-out infinite;
+    }
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; }
+      50% { text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc; }
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a:hover {
+      color: #fff;
+      transform: scale(1.1);
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #00ffcc;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    /* Active class for the current page */
+    nav a.active {
+      color: #fff;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+    nav a.active::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 0.8s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section-header {
+      display: inline-block;
+      padding: 10px 30px;
+      background: rgba(0, 255, 204, 0.1);
+      border-radius: 50px;
+      margin-bottom: 20px;
+      border: 2px solid #00ffcc;
+    }
+    
+    /* --- CONTACT FORM SPECIFIC STYLES --- */
+    .contact-form-container {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid #00ffcc;
+        border-radius: 15px;
+        text-align: left;
+        backdrop-filter: blur(10px);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #00ffcc;
+        font-weight: bold;
+        text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid #00ffcc;
+        border-radius: 5px;
+        color: white;
+        font-size: 1em;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #fff;
+        box-shadow: 0 0 15px rgba(0, 255, 204, 0.8);
+        outline: none;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, #00ffcc, #00cc99);
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      margin: 20px 10px 0 0; /* Adjusted margin for forms */
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 255, 204, 0.4);
+      border: none;
+      cursor: pointer;
+    }
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 255, 204, 0.6);
+      background: linear-gradient(135deg, #00cc99, #00ffcc);
+    }
+    /* --- END CONTACT FORM STYLES --- */
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-top: 50px;
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #00ffcc;
+      color: #000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .scroll-top.visible {
+      opacity: 1;
+    }
+    .scroll-top:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SON ROBOTICS FOR THE FUTURE LIFE</h1>
+    <p>Empowering youth through Robotics, Programming, and Cyber Security</p>
+    
+    <nav>
+      <a href="new vision.html">Home</a>
+      <a href="robotics.html">Robotics</a>
+      <a href="tech.html">Technology</a>
+      <a href="worksop.html">Workshop</a>
+      <a href="new vision.html#impact">Impact</a>
+      <a href="about-us.html">About Us</a> 
+      <a href="contact.html" class="active">Contact Us</a> <a href="faq.html">FAQ</a> 
+    </nav>
+  </header>
+
+  <section id="contact">
+    <div class="section-header">
+      <h2>Send Us a Message</h2>
+    </div>
+
+    <p style="max-width: 600px; margin: 20px auto;">We're excited to hear from you! Please fill out the form below for inquiries about enrollment, partnerships, or general questions.</p>
+
+    <div class="contact-form-container">
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Your Full Name *</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Inquiry about Robotics Workshop">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message *</label>
+                <textarea id="message" name="message" rows="6" required placeholder="I am interested in..."></textarea>
+            </div>
+
+            <div style="text-align: right;">
+                <button type="submit" class="cta-button">Send Message</button>
+            </div>
+        </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SON ROBOTICS. All rights reserved.</p>
+    <p>Empowering the next generation of innovators.</p>
+  </footer>
+
+  <div class="scroll-top" onclick="scrollToTop()">▲</div>
+
+  <script>
+    // Scroll-to-Top Functionality
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    
+    window.onscroll = () => {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    };
+    
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+</html>
